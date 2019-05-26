@@ -13142,7 +13142,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -13214,7 +13214,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Minimum price of the data</span>
@@ -13325,7 +13325,7 @@ PTRATIO - Neighborhoods with an increase in students to teacher ratio should mea
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Import &#39;r2_score&#39;</span>
@@ -13387,7 +13387,7 @@ PTRATIO - Neighborhoods with an increase in students to teacher ratio should mea
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Calculate the performance of this model</span>
@@ -13439,7 +13439,7 @@ PTRATIO - Neighborhoods with an increase in students to teacher ratio should mea
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Yes, I believe a 92.3% R2 score is a pretty good model.</p>
+<p>Yes, I believe a .923 R2 score is a pretty good model because the model can predict within 92% variance.</p>
 
 </div>
 </div>
@@ -13463,14 +13463,14 @@ PTRATIO - Neighborhoods with an increase in students to teacher ratio should mea
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Import &#39;train_test_split&#39;</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
 
 <span class="c1"># TODO: Shuffle and split the data into training and testing subsets</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">prices</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">train_size</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">prices</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">train_size</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 
 <span class="c1"># Success</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training and testing split was successful.&quot;</span><span class="p">)</span>
@@ -13513,7 +13513,7 @@ PTRATIO - Neighborhoods with an increase in students to teacher ratio should mea
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>So that your algorithm can learn from the training to get the best possible fit and to then check the testing set to make sure the algorithm isn't overfit.</p>
+<p>So that your algorithm can learn from the training to get the best possible fit and to then check the testing set to make sure the algorithm isn't overfit as well as make sure our model generalizes the data well.</p>
 
 </div>
 </div>
@@ -13589,7 +13589,7 @@ Think about the pros and cons of adding more training points based on if the tra
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Max depth = 3 | The training score decreases as it has to generalize more to fit the data best. The testing score increases as the model gets more accurate. | Having more than 300 points will only benefit the model minimally.</p>
+<p>Max depth = 3 | The training score decreases as it has to generalize more to fit the data best. The testing score increases as the model gets more accurate. This model has a training score close to .7 which is a good indication the model is neither overfitting or underfitting. Also, this model continues to bring the training and test scores closer as additional data points are added which is another indication this is the best max depth. | Having more than 300 points will only benefit the model minimally.</p>
 
 </div>
 </div>
@@ -13702,7 +13702,7 @@ Think about the pros and cons of adding more training points based on if the tra
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The Grid search technique is to create a table of the different values for a parameter to find the best parameter value for the model based on a given scoring method. | Grid search can be used by creating a table with max depths of 1 to 10 and finding the best F1 score for the model.</p>
+<p>The Grid search technique can be used to compute the best values of parameters given for the data set by running one function and not having to manually tune these parameters and hyperparameters. The grid search function can be set to many different scoring methods depending on the situation. This technique is used to get the best estimator and parameter values that matched the highest score. | Grid search can be used to tune the decision tree classifier for the following parameters max_depth, min_samples_split, min_samples_leaf, min_weight_fraction_leaf.</p>
 
 </div>
 </div>
@@ -13725,7 +13725,7 @@ Think about the pros and cons of adding more training points based on if the tra
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>k-fold cross-validation is breaking up your data multiple times between training and test and averaged out the results to get the best fitting model. | This technique can help the grid search model by allowing more points and configuration to be used as an average to train the model.</p>
+<p>k-fold cross-validation is breaking up your data multiple times between training and validation sets and averages out the score results to get the best fitting model and then scored against the test set. | This technique can help the grid search model by training the data multiple times in different configurations and averaging the results to train the model.</p>
 
 </div>
 </div>
